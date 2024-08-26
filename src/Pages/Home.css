@@ -1,0 +1,18 @@
+.homecont{
+    margin: 5rem;
+    padding-top: 10%;
+    
+}
+
+.maincontt{
+    height: 80vh;
+    width: 100vw;
+    /* background: linear-gradient(to bottom left, #7acef7, #06507e); */
+}
+.gridd{
+    justify-content: center;
+}
+
+.boxy{
+    margin: auto;
+}

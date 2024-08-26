@@ -1,0 +1,130 @@
+.mainanalysecont{
+    /* background: linear-gradient(to bottom, #4ac3ff, #0D74B5); */
+    background: linear-gradient(to bottom left, #7acef7, #06507e);
+    height: 100vh;
+    margin-top: 10vh;
+    width: 100vw;
+    display: flex;
+}
+.createcont{
+    /* background: linear-gradient(to bottom, #4ac3ff, #0D74B5); */
+    background: linear-gradient(to bottom left, #7acef7, #06507e);
+    height: 100vh;
+    margin-top: 10vh;
+    width: 100vw;
+    /* display: flex; */
+}
+
+.Uploader{
+    width: 50%;
+    margin-left: 3rem;
+    padding-left: 7rem;
+    padding-top: 20vh;
+    color: white;
+    text-shadow: 0.5px 0.5px #0D74B5
+
+}
+.Uploaderi{
+    width: 100%;
+    margin-left: 3rem;
+    padding-left: 7rem;
+    padding-top: 5vh;
+    color: white;
+    text-shadow: 0.5px 0.5px #0D74B5;
+    display: flex;
+    flex-direction: column;
+    /* display: none; */
+    /* margin-top: 15vh; */
+
+
+}
+
+/* form{
+    display: flex;
+    flex-direction: column;
+} */
+
+.uploading{
+    width: 40%;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+.uploadingnew{
+    width: 40%;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+.uploadingnew2{
+    width: 40%;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+#uploadbtn{
+    height: 50px;
+
+}
+#fileup{
+    display: inline-block;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #23A2E8;
+  color: white;
+  border: 1px solid #0D74B5;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+}
+
+
+#display{
+    width: 50%;
+    height: 90%;
+    overflow-y: auto;
+    border: 1px solid black;
+    color: #06507e;
+    padding: 3rem;
+    padding-left: 4rem;
+    scrollbar-width: none;  /* Firefox */
+    background: linear-gradient(to bottom left, #bbddee, #ffffff);
+    margin-top: 2rem;
+    border-radius: 10px;
+}
+
+.lastrow{
+    display: flex;
+    gap:2rem;
+}
+
+.info{
+    color: r
+}
+
+
+::-ms-input-placeholder { /* Edge 12 -18 */
+    color: red;
+  }
+
+
+  .formcont{
+    width: 90vw;
+    display: flex;
+    gap: 3rem;
+  }
+
+
+  #resume{
+    width: 50%;
+    overflow: hidden;
+    margin: auto;
+    margin-left: 25%;
+    padding: 2rem;
+    height: 80%;
+    border-radius: 10px;
+    background-color: rgb(177, 230, 255);
+    /* display: none; */
+
+  }

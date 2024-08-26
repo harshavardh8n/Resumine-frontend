@@ -1,0 +1,144 @@
+*{
+    padding:0;
+    margin:0;
+
+    /* fonts  */
+
+    
+
+}
+
+.Navcont{
+
+    /* position: fixed; */
+
+    font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+    
+
+}
+
+.Navbar{
+   box-shadow: 0 4px 2px -2px rgba(214, 210, 210, 0.2);
+   position: fixed;
+  background-color: rgb(255, 253, 253);
+  color: rgb(36, 35, 35);
+  height:10vh;
+  z-index: 3;
+
+}
+
+nav{
+    display:flex;
+    justify-content: space-between;
+    padding:2vh 1rem;
+    height:10vh;
+    
+    position: sticky;
+    top: 0;
+    /* position: fixed; */
+    width: 100%;
+    
+}
+
+nav ul{
+    display:flex;
+    gap:3rem;
+    padding:0rem 1rem;
+    align-items: center;
+    margin-left: 1rem;
+}
+
+nav ul li{
+    list-style: none;
+    cursor: pointer;
+}
+
+nav ul li a{
+    text-decoration: none;
+    border-radius: 5%;
+    color:black;
+    font-weight: 600;
+    padding: 1rem;
+}
+
+/* nav ul li a:hover{
+   
+} */
+
+/* .chamak:hover{
+    /* color: white; */
+    /* background-color: skyblue;
+    text-decoration: underline;
+    transition-duration: 500ms;
+}
+ */ 
+
+
+
+
+#logohh{
+    height: 15vh;
+    /* border-radius: 200%;
+    overflow: hidden; */
+    position: absolute;
+    align-items: center;
+    top: -10px;
+    cursor: pointer;
+}
+#logoh{
+    margin-left: 9rem;
+    position: relative;
+    height: 10vh;
+    width: 15vw;
+    overflow: hidden;
+}
+
+.Contact{
+    display: flex;
+    gap:2rem;
+    margin-right:3rem;
+}
+
+.leftsection{
+    width:60%;
+}
+
+.rightsection{
+    width:40%;
+}
+
+/* .cart{
+    margin-right: 2rem;
+} */
+
+#carti{
+    cursor: pointer;
+    padding: 1rem;
+
+}
+
+#carti:hover{
+    color: blue;
+}
+
+.login{
+    margin-top: 10px;
+}
+.profile{
+    margin-top: 10px;
+}
+.rightnav{
+    display: flex;
+    margin-right: 5rem;
+    gap: 1rem;
+}
+
+.navname{
+    color: rgb(46, 46, 46);
+}
+
+.navname:hover{
+    color: blue ;
+}
