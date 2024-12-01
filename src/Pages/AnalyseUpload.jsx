@@ -142,6 +142,7 @@ const AnalyseUpload = () => {
       <div className="Uploader">
         <Text fontSize="5xl" as="b">Analyze your resume</Text><br />
         <Text fontSize="5xl" as="b">to get Shortlisted</Text><br />
+          <Text fontSize="md"> (Upload only .jpg, .jpeg or .png) </Text>
         <br />
         <div className='uploading'>
 
