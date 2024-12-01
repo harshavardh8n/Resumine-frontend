@@ -174,6 +174,7 @@ const Compare = () => {
         <Text fontSize="5xl" as="b">
           Compare 2 Resumes{" "}
         </Text>
+         <Text fontSize="md"> (Upload only .jpg, .jpeg or .png) </Text><br />
         <br />
         {/* <Text fontSize="5xl" as="b"> find better</Text><br /> */}
         <br />
