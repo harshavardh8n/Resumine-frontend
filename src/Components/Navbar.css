@@ -8,6 +8,9 @@
 
 }
 
+@media(min-width:480px){
+
+
 .Navcont{
 
     /* position: fixed; */
@@ -141,4 +144,54 @@ nav ul li a{
 
 .navname:hover{
     color: blue ;
+}
+
+}
+
+
+@media(max-width:480px){
+
+
+    .Navbarcont{
+        max-width: 100vw;
+    }
+
+    #logoh{
+        display: none;
+    }
+
+    .Navbar{
+        width: 10rem;
+        margin: auto;
+        height: 0;
+        justify-content: center;
+    }
+
+    nav ul li{
+        list-style: none;
+        cursor: pointer;
+        font-weight: 500;
+    }
+
+    nav ul{
+        display:flex;
+        gap: 2rem;
+        padding-top: 1rem;
+        align-items: center;
+        /* margin-left: 1rem; */
+    } 
+
+    #hca{
+        margin-top: 1rem;
+    }
+
+
+    
+
+
+    
+    
+    
+    
+
 }

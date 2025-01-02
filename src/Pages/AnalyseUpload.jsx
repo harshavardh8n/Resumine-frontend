@@ -30,6 +30,7 @@ const AnalyseUpload = () => {
     // };
 
     // const handleSubmit = async (e) => {
+
     //     e.preventDefault();
     //     try {
     //         const response = await axios.get('http://localhost:5000/askresume', {
@@ -45,7 +46,7 @@ const AnalyseUpload = () => {
     // };
 
     const clear = ()=>{
-      document.getElementById('display').innerHTML = "";
+      document.getElementById('displayer').innerHTML = "";
       setloading(false);
 
     }
@@ -57,6 +58,7 @@ const AnalyseUpload = () => {
   data.append("cloud_name", "duu6k0oso");
 
   try {
+
     const res = await fetch("https://api.cloudinary.com/v1_1/duu6k0oso/image/upload", {
       method: "post",
       body: data
@@ -68,7 +70,7 @@ const AnalyseUpload = () => {
       // Now you can access the uploaded image URL
       const imageUrl = jsonResponse.secure_url;
       setImage(imageUrl)
-      console.log("Uploaded image URL:", imageUrl);
+      // console.log("Uploaded image URL:", imageUrl);
 
       toast({
         title: 'Image Uploaded.',
@@ -94,7 +96,7 @@ const AnalyseUpload = () => {
   
       try {
         setloading(true);
-        alert("Inside func");
+        // alert("Inside func");
         console.log({img:img})
         const response1 = await axios.post('https://resumine-backend.vercel.app/api/analyse', {
           img: img // Ensure the image URL is sent correctly
@@ -106,7 +108,7 @@ const AnalyseUpload = () => {
         setready(true);
         setloading(false);
 
-        document.getElementById('display').innerHTML = marked.parse(response1.data);
+        document.getElementById('displayer').innerHTML = marked.parse(response1.data);
       } catch (error) {
         console.error('Error fetching data:', error);
       } finally {
@@ -119,59 +121,63 @@ const AnalyseUpload = () => {
   const handleFileChange = (e) => {
     setFile(e.target.files[0]);
     setselect(true);
+
   };
 
-  //   const improved = async (e) => {
-  //     e.preventDefault();
-  //     try {
-        
-  //         const response1 = await axios.get('http://localhost:5000/improved');
-  //         console.log(response1.data);
-  //         // setresponse(marked.parse(response1.data))
-  //         document.getElementById('display').innerHTML = marked.parse(response1.data);
-          
-  //     } catch (error) {
-  //         console.error('Error fetching data:', error);
-  //     }
-      
-  // };
-
   return (
-    
-    <div className='mainanalysecont'>
-      <div className="Uploader">
-        <Text fontSize="5xl" as="b">Analyze your resume</Text><br />
-        <Text fontSize="5xl" as="b">to get Shortlisted</Text><br />
-        <br />
-        <div className='uploading'>
-
-        
-        <input type="file" onChange={handleFileChange} id="fileup"/>
-        <Button onClick={submitImage } colorScheme='blue' id="uploadbtn">Upload</Button><br />
+    <>
+    <div className='flex bg-gradient-to-bl from-[#7acef7] to-[#06507e] lg:flex-row flex-col' >
+      <div className='lg:w-[40%] h-screen ml-10'>
+        <div className='mt-36 lg:ml-20'>
+          <h1 className='text-[40px] font-bold text-white'>
+          Analyze your resume
+          </h1>
+          <h1 className='text-[40px] font-bold text-white'>
+          to get Shortlisted
+          </h1>
+          <p className='text-white'>
+          (Upload only .jpg, .jpeg or .png)
+          </p>
         </div>
-        <br />
-        <div className="lastrow">
+        <div className="mt-4 lg:ml-20">
+          <div>
 
-        
-        <Button onClick={resp} colorScheme='cyan' id="analysebtn" style={{ display: uploaded ? 'inline-block' : 'none' }}>Analyse</Button>
-        <Button onClick={clear} colorScheme='teal' id="analysebtn" style={{ display: uploaded ? 'inline-block' : 'none' }}>clear</Button>
-        {/* <Spinner></Spinner> */}
-        <Spinner style={{display: loading ? 'inline-block' : 'none' }}
-        thickness='4px'
-        speed='0.65s'
-        emptyColor='gray.200'
-        color='blue.400'
-        size='xl'
-      />
+          </div>
+          <div className='flex flex-col w-[45%] gap-2'>
+        <input type="file" onChange={handleFileChange} id="fileup" className=''/>
+         <Button onClick={submitImage } colorScheme='blue' id="uploadbtn">Upload</Button><br />
+          </div>
       </div>
+        <div className='lg:ml-20'>
+            <Button
+              onClick={resp}
+              className="mr-2 bg-green-500 hover:bg-green-600 text-white rounded-lg px-4 py-2"
+              >
+              Analyse
+            </Button>
+            <Button
+              onClick={clear}
+              className="bg-red-500 hover:bg-red-600 text-white rounded-lg px-4 py-2"
+            >
+              Clear
+            </Button>
+              </div>
+              <Spinner style={{display: loading ? 'inline-block' : 'none' }}
+              thickness='4px'
+              speed='0.65s'
+              emptyColor='gray.200'
+              color='blue.400'
+              size='xl'
+            />
+      </div>
+      <div className='lg:w-1/2 h-screen w-[90%]'style={{display: ready ? 'inline-block' : 'none' }}>
+        <div className='m-5 w-full mt-24 h-[80%] rounded-lg border-white p-5 bg-white overflow-auto'id="displayer"> 
+        {/* <div className='m-5 w-full mt-20 h-[80%] rounded-lg border-white p-5 bg-white overflow-auto'id="displayer" style={{display: ready ? 'inline-block' : 'none' }}>  */}
+
         </div>
-        {/* <button onClick={improved}>Improve</button> */}
-        {/* <input type="text" name="ask" id="ask" value={ask.question} onChange={handleChange}/> */}
-        {/* <button onClick={handleSubmit}>ask</button> */}
-        <div id="display" style={{display: ready ? 'inline-block' : 'none' }}>
-          {/* {response} */}
-        </div>
+     </div>
     </div>
+    </>
   )
 }
 
